@@ -32,7 +32,7 @@ Clone the Repository
 
 Bash
 
-git clone https://github.com/your-username/quicktionary.git
+git clone https://github.com/ziymaxcode/Quicktionary.git
 Open Chrome Extensions
 Navigate to chrome://extensions in your Chrome browser.
 
