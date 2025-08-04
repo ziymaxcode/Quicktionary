@@ -1,0 +1,122 @@
+/* Global Styles & Variables */
+:root {
+    --bg-color: #111827;
+    --primary-text: #E5E7EB;
+    --secondary-text: #9CA3AF;
+    --brand-color: #38BDF8;
+    --brand-hover: #0EA5E9;
+    --panel-color: #1F2937;
+    --border-color: #374151;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    width: 350px;
+    padding: 16px;
+    margin: 0;
+}
+
+/* Header */
+h1 {
+    color: var(--brand-color);
+    font-size: 24px;
+    text-align: center;
+    margin: 0 0 16px 0;
+}
+
+/* Search Area */
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#word-input {
+    flex-grow: 1;
+    background-color: var(--panel-color);
+    border: 1px solid var(--border-color);
+    color: var(--primary-text);
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+#word-input:focus {
+    outline: none;
+    border-color: var(--brand-color);
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+}
+
+#lookup-btn {
+    background-color: var(--brand-color);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#lookup-btn:hover {
+    background-color: var(--brand-hover);
+}
+
+/* Result & Loader */
+#result-container {
+    background-color: var(--panel-color);
+    border-radius: 8px;
+    padding: 12px;
+    min-height: 80px;
+    position: relative;
+    font-size: 14px;
+}
+
+.loader {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--brand-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* History */
+#history-container {
+    margin-top: 20px;
+}
+
+#history-container h2 {
+    font-size: 16px;
+    color: var(--secondary-text);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 4px;
+    margin: 0 0 8px 0;
+}
+
+.history-item {
+    background-color: var(--panel-color);
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.history-item:hover {
+    background-color: var(--brand-color);
+    color: #ffffff;
+}

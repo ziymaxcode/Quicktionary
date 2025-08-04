@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quicktionary</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <h1>Quicktionary</h1>
+
+    <div class="search-box">
+        <input type="text" id="word-input" placeholder="Enter a word...">
+        <button id="lookup-btn">Lookup</button>
+    </div>
+    
+    <div id="result-container">
+        <div class="loader" id="loader"></div>
+        <div id="result-div"></div>
+    </div>
+
+    <div id="history-container">
+        <h2>History</h2>
+        <div id="history-list"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Quicktionary",
+  "version": "2.0",
+  "description": "Select or type a word to get its definition. Includes search history.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": "icons/icon48.png",
+    "default_popup": "popup.html",
+    "default_title": "Quicktionary"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "storage",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://api.dictionaryapi.dev/"
+  ]
+}
